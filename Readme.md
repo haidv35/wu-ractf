@@ -12,6 +12,6 @@
 | Quarantine                      | See if you can get access to an account on the we            | [Quarantine.md](Quarantine.md)                               |
 | Quarantine - Hidden information | We think there's a file they don't want people to see hidden somewhere! See if you can find it, it's gotta be on their webapp somewhere... | [QuarantineHidden Information.md](QuarantineHiddenInformation.md) |
 | Finding server information      | See if you can find the source, we think it's called app.py  | [FindingServerInformation.md](FindingServerInformation.md)   |
-| Getting admin                   | See if you can get an admin account.                         | [GettingAdmin.md](GettingAdmin)                              |
+| Getting admin                   | See if you can get an admin account.                         | [GettingAdmin.md](GettingAdmin.md)                           |
 |                                 |                                                              |                                                              |
 
