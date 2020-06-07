@@ -46,9 +46,20 @@ app.listen(port, () => console.log(`Listening on port ${port}`))
 
 Đọc lướt qua thì mình biết endpoint /getflag có vẻ sẽ chứa flag
 
-Chúng ta sẽ bắt đầu phân tích. Đầu tiên phương thức ở đây là **POST**, dữ liệu gửi lên bao gồm 2 params là **one** và **two**. Câu lệnh điều kiện 1 kiểm tra xem có dữ liệu gửi lên không, nếu không response 400. Câu lệnh điều kiện 2 kiểm tra 2 chuỗi phải là falsy, nếu là truthy thì sẽ response **400**. Câu lệnh điều kiện 3 kiểm tra độ dài 2 chuỗi có khác nhau hay không hoặc 2 chuỗi có bằng nhau không, nếu thoả mãn 1 trong 2 thì sẽ trả về **Strings are either too different or not different enough**. 2 câu lệnh tiếp sử dụng chung 1 customhash, customhash nhận vào secret_key và chuỗi one hoặc two. Cuối cùng so sánh 2 chuỗi có bằng nhau không. Tuy nhiên ở câu lệnh điều kiện này có lỗi **loose comparisons**.
+- Path: /getflag
+
+- Phương thức: POST
+
+- Kiểm tra có dữ liệu post lên không => Nếu không response 400
+- 1 trong 2 chuỗi là truthy  => response 400
+- Độ dài 2 chuỗi khác nhau hoặc 2 chuỗi cùng giá trị và kiểu => response 400
+- 2 chuỗi cùng giá trị (loose comparisons) => Flag
+
+
 
 ![image-20200607233958223](images/image-20200607233958223.png)
+
+**<u>*=> Type Juggling Bug*</u>**
 
 => Payload: curl -X POST http://95.216.233.106:42962/getflag --header "Content-Type: application/json" --data '{"one": [],"two": []}'
 
