@@ -6,7 +6,7 @@
 
 => LFI thông qua path **static?f=backup.txt**
 
-Ta sẽ nhận được 1 tài khoản
+Ta sẽ nhận được 1 tài khoản, dùng tài khoản này để đăng nhập
 
 ![image-20200608195630469](images/image-20200608195630469.png)
 
