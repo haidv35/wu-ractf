@@ -8,7 +8,7 @@ Decrypt JWT: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjogIkRhdmUiLCAicHJpdm
 
 ![image-20200608013623685](images/image-20200608013623685.png)
 
-=> Có ít nhất 3 trường: id, user, privilege => Bypass bằng cách cho privilege khác 1
+=> Có ít nhất 3 trường: id, user, privilege => Bypass bằng cách cho privilege khác 1, SQLi tay hoặc sử dụng sqlmap với payload như sau: 
 
 Payload: ' union select 2,2,2--
 
